@@ -56,6 +56,7 @@ $deps23x = array(
     array('Symfony/Component/Console', 'git://github.com/symfony/Console.git', 'v2.0.12'),
     array('Symfony/Component/Finder', 'git://github.com/symfony/Finder.git', 'v2.0.12'),
     array('Symfony/Component/Yaml', 'git://github.com/symfony/Yaml.git', 'v2.0.12'),
+    array('Zend', 'git://github.com/mridgway/Zend-Framework-1.x-Mirror.git', '82d2aa6bf16dbf9eae139a50aba95d89a33d2490'),
 );
 foreach ($deps23x as $dep) {
     list($name, $url, $rev) = $dep;

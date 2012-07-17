@@ -51,10 +51,14 @@ $loader->registerNamespaces(array(
     'SoftDeleteable\\Fixture'    => __DIR__.'/Gedmo',
     'Uploadable\\Fixture'        => __DIR__.'/Gedmo',
     'Wrapper\\Fixture'           => __DIR__.'/Gedmo',
+    'LuceneSearchable\\Fixture'           => __DIR__.'/Gedmo',
     // Stubs
     'Gedmo\\Uploadable\\Stub'    => __DIR__,
 ));
+$loader->registerPrefix('Zend', VENDOR_PATH.'/Zend/library');
 $loader->register();
+
+set_include_path(get_include_path() . PATH_SEPARATOR . VENDOR_PATH . '/Zend/library');
 
 Doctrine\Common\Annotations\AnnotationRegistry::registerFile(
     VENDOR_PATH.'/doctrine-orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php'
